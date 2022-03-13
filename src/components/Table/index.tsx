@@ -11,9 +11,11 @@ type TableProps = {
 export default function Table({ color, rows }: TableProps) {
 	return (
 		<StyledTable color={color}>
-			{rows.map((items, i) => (
-				<TableRow key={i} items={items} />
-			))}
+			<tbody>
+				{rows.map((items, i) => (
+					<TableRow key={i} items={items} />
+				))}
+			</tbody>
 		</StyledTable>
 	);
 }
